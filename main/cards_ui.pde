@@ -61,7 +61,7 @@
 
   //Basic Text Button
   public boolean Button(String text, int x, int y, int w, int h) {
-
+    noStroke();
     if (mouseX >= x && mouseX <= x+w && 
       mouseY >= y && mouseY <= y+h) {
       fill(c_hover);
@@ -126,6 +126,7 @@
 
   //Button With Tooltip
   boolean Button(String text, int x, int y, int w, int h, String tooltip) {
+    noStroke();
     if (mouseX >= x && mouseX <= x+w && 
       mouseY >= y && mouseY <= y+h) {
       Tooltip(tooltip, x+w/2, y-1);
