@@ -3,13 +3,13 @@
  author: Lucas Cassiano - cassiano@mit.edu
  date: July 3rd, 2016
  lastUpdate: July 4th, 2016
- version: 1.0
+ version: 1.01
  
  Controllers:
  -Button
  -Image
  -
- */
+-------------------------------------------*/
   //Colors
   private color c_very_dark = color(36, 37, 46);
   private color c_dark = color(29, 33, 44);
