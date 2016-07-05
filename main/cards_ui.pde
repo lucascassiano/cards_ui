@@ -1,15 +1,15 @@
 /*---------------------------------------
- UI Components of Cards_UI for Processing v1.0
+ UI Components of Cards_UI for Processing
  author: Lucas Cassiano - cassiano@mit.edu
  date: July 3rd, 2016
- lastUpdate: July 4th, 2016
+ lastUpdate: July 5th, 2016
  version: 1.01
  
  Controllers:
  -Button
  -Image
  -
--------------------------------------------*/
+ */
   //Colors
   private color c_very_dark = color(36, 37, 46);
   private color c_dark = color(29, 33, 44);
@@ -61,7 +61,7 @@
 
   //Basic Text Button
   public boolean Button(String text, int x, int y, int w, int h) {
-    noStroke();
+
     if (mouseX >= x && mouseX <= x+w && 
       mouseY >= y && mouseY <= y+h) {
       fill(c_hover);
@@ -105,17 +105,17 @@
     textSize(25);
     int w = (int)textWidth(text);
     int h = 50;
-    int tw = 10; //triangle width
+    int tw = 14; //triangle width
     int th = 15; //triangle height
     noStroke();
     //Shadow
     fill(0, 0, 0, 15);
     rect(5+x-w/2, 5+y-th-h, w, h, 2);
-    triangle(5+x-th+tw/2, 5+y-th, x, y, x+tw/2, y-th);
+    triangle(5+x-tw/2, 5+y-th, 5+x, 5+y, 5+x+tw/2, 5+y-th);
     //Color
     fill(c_very_dark);
     rect(x-w/2, y-th-h, w, h, 2);
-    triangle(x-th+tw/2, y-th, x, y, x+tw/2, y-th);
+    triangle(x-tw/2, y-th, x, y, x+tw/2, y-th);
     //Text
     textSize(15);
     fill(255);
@@ -126,7 +126,6 @@
 
   //Button With Tooltip
   boolean Button(String text, int x, int y, int w, int h, String tooltip) {
-    noStroke();
     if (mouseX >= x && mouseX <= x+w && 
       mouseY >= y && mouseY <= y+h) {
       Tooltip(tooltip, x+w/2, y-1);
@@ -651,6 +650,10 @@
 
   public float Slider(String label, float value, int x, int y, char t) {
     return Slider(label, 0f, 1f, value, x, y, s_big, s_height, t);
+  }
+  
+  public float Slider(String label, float value, int x, int y, int w, int h) {
+    return Slider(label, 0f, 1f, value, x, y, w, h);
   }
 
   public float Slider(float value, int x, int y, int w, int h) {
