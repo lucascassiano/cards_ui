@@ -3,12 +3,15 @@
  author: Lucas Cassiano - cassiano@mit.edu
  date: July 3rd, 2016
  lastUpdate: July 5th, 2016
- version: 1.01
+ version: 1.02
  
  Controllers:
  -Button
- -Image
- -
+ -ImageButton Basic
+ -Tooltip
+ -Slider
+ -Toggle
+ -Card
  */
   //Colors
   private color c_very_dark = color(36, 37, 46);
